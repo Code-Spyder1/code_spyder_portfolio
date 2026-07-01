@@ -501,7 +501,8 @@ button:hover{
 
 .resume-preview img{
   width: 100%;
-  border-radius: 24px;
+  max-width: 500px;
+  border-radius: 10px;
 }
 
 .footer{
