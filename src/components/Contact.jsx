@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || "code.spyder.dev@gmail.com";
 
   // -------------------------
   // Form State
@@ -26,15 +27,17 @@ function Contact() {
 
     emailjs
       .send(
-        "service_mwpxrio",
-        "template_xuwuqkg",
+        "service_dmczbkp",
+        "template_rgj6q7p",
         {
           from_name: formData.name,
           from_email: formData.email,
+          reply_to: formData.email,
           subject: formData.subject,
           message: formData.message,
+          to_email: contactEmail,
         },
-        "6Lr3wSxoI_fUbw-pH"
+        "8NjC9h1DxNueN-RMh"
       )
       .then((result) => {
         console.log("EmailJS send result:", result);
@@ -67,13 +70,13 @@ function Contact() {
         <div className="contact-cards">
 
           <div className="contact-card">
-            <h3>📞 Phone</h3>
-            <p>(816) 602-6079</p>
+            <h3>TikTok</h3>
+            <p>@code.spyder</p>
           </div>
 
           <div className="contact-card">
             <h3>📧 Email</h3>
-            <p>abbiepacas14@gmail.com</p>
+            <p>{contactEmail}</p>
           </div>
 
           <div className="contact-card">

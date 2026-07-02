@@ -339,7 +339,6 @@ body{
 
 .hero-btn,
 .contact-btn,
-.resume-btn,
 button{
   display: inline-flex;
   align-items: center;
@@ -357,7 +356,6 @@ button{
 
 .hero-btn:hover,
 .contact-btn:hover,
-.resume-btn:hover,
 button:hover{
   transform: translateY(-2px);
   background: #ff4cc4;
@@ -366,7 +364,6 @@ button:hover{
 .about-content,
 .skills-grid,
 .contact-right,
-.resume-preview,
 .project-grid{
   display: grid;
   gap: 24px;
@@ -382,7 +379,6 @@ button:hover{
 
 .skill-card,
 .project-card,
-.resume-preview,
 .contact-right form,
 .footer{
   background: rgba(255, 255, 255, 0.04);
@@ -430,9 +426,49 @@ button:hover{
 }
 
 .skill-card h3,
-.project-card h3,
-.resume-preview h3{
+.project-card h3 {
   color: #fff;
+}
+
+.services {
+  padding: 100px 10%;
+  background: #111;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #ff69b4;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #1a1a1a;
+  padding: 35px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff69b4;
+}
+
+.service-card h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #cfcfcf;
+  line-height: 1.6;
 }
 
 @keyframes skillFadeIn{
@@ -497,12 +533,6 @@ button:hover{
 .contact-right textarea{
   min-height: 160px;
   resize: vertical;
-}
-
-.resume-preview img{
-  width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
 }
 
 .footer{
